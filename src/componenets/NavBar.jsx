@@ -2,6 +2,7 @@ import { useState } from "react"
 import logo from "../assets/logo.png"
 import { navItems } from "../constants"
 import { Menu, X } from "lucide-react"
+ import { Link } from "react-router-dom"
 const NavBar = () => {
     const [mobileDrawOpen, setMobileDrowOpen] = useState(false)
     const toggleNavbar = () => {
@@ -49,9 +50,8 @@ const NavBar = () => {
                             })}
                         </ul>
                         <div className="flex space-x-6 ">
-                            <a href="" className="py-2 px-3 border  rounded-md">Sing in</a>
-                            <a href="" className="py-2 px-3   rounded-md bg-gradient-to-r from
-                             bg-orange-500 to-orange-800">Create an Acount</a>
+                        <Link to="/singin">Sing in </Link>
+                        <Link to="/login">Log in</Link>
                         </div>
                     </div>
                 )}
